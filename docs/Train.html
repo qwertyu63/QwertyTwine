@@ -71,7 +71,7 @@ Near the train station, you see a small cafe. Walking inside, you glance at the 
 [[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="4" name="Stop 3" tags="" position="275,50" size="100,100">**Opulent Palace**
 (display:&quot;Data&quot;)\
 
-&quot;This area is the **Opulent Palace**. The palace is made of gold and silver. Very few people live here for long; they choose it, get bored and transfer out. The glee brought to them by wealth fades over time. One the other hand, I hear the jewelry stores here are amazing. While you can&#39;t take the jewelry with you, your soul wearing them will provide their benefits anyway.&quot;
+&quot;This area is the **Opulent Palace**. The palace is made of gold and silver. Very few people live here for long; they choose it, get bored and transfer out. The glee brought to them by wealth fades over time. On the other hand, I hear the jewelry stores here are amazing. While you can&#39;t take the jewelry with you, your soul wearing them will provide their benefits anyway.&quot;
 
 Taking his advice, you find a jewelry shop and look around.
 
@@ -168,9 +168,12 @@ Heading inside, you spot a class schedule. There are two lined up that you&#39;v
 ]\
 (if:$Dance is 0)[(link:&quot;Dance in the Sand:&quot;)[(set:$Dance to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)](else:)[**Dance in the Sand:**] After drinking this, time slides along at your whim. You can speed up or slow down your perception by up to 100%, letting you fit more thinking time or fast foward through boring things.
 ]\
+(if:$Sun is 0)[(link:&quot;Sun on the Horizon:&quot;)[(set:$Sun to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)](else:)[**Sun on the Horizon:**] After drinking this, you attune with the flow of time and space. You always know the exact time of day to the second, which way is north, your current location (latitude, longitude and altitude) and the current phase of the moon.
+]\
 ](else:)[\
 **Joy in the Wind:** After drinking this, fortune bends in your favor. Purely events are 50% more likely to go in your favor (e.g. a coin flip has a 75% chance to land the way to want).
 **Dance in the Sand:** After drinking this, time slides along at your whim. You can speed up or slow down your perception by up to 100%, letting you fit more thinking time or fast foward through boring things.
+**Sun on the Horizon:** After drinking this, you attune with the flow of time and space. You always know the exact time of day to the second, which way is north, your current location (latitude, longitude and altitude) and where the current phase of the moon.
 ]\
 
 [[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="9" name="Stop 4" tags="" position="400,75" size="100,100">**Desire Plaza**
@@ -227,8 +230,8 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 &quot;Thanks for playing along with all of this. You&#39;ve saved my job, that&#39;s for sure. I&#39;m sure I&#39;ll see you again eventually, when you&#39;re supposed to be here.&quot;
 
 [[Take the Bridge-&gt;Ending]]</tw-passagedata><tw-passagedata pid="12" name="Data" tags="" position="525,75" size="100,100">**$Coins Astral Coins Remaining**
-(if:$Timer &lt;= 2)[**Stops Left: $Timer**
-]\
+**Stops Left: $Timer**
+
 (if:$Display is 0)[(if:$Timer is 7)[
 &quot;I should actually explain how the Afterlife works. That&#39;s the proper name, by the way; the gods named it the Afterlife. And before you ask, there&#39;s only the one; we don&#39;t actually care how people act in Life.&quot;
 
@@ -328,6 +331,8 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 (if:$Control is 1)[**Red Star Control:** You control your waste products and can be selectively infertile.
 ]\
 (if:$Ownership is 1)[**Ring of Ownership:** Things you are carrying can not be stolen.
+]\
+(if:$Sun is 1)[**Sun on the Horizon:** You always know the time, compass directions, your location and the moon phase.
 ]\
 (if:$Sweater is 1)[**Sweater of Balance:** You are immune to heat, cold and fire.
 ]\
