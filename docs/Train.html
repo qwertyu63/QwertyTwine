@@ -16,7 +16,7 @@
 }
 tw-sidebar tw-icon.undo {
 	display: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Board the Midnight Train" tags="" position="25,200" size="100,100">**The Midnight Train**
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Board the Midnight Train" tags="" position="25,150" size="100,100">**The Midnight Train**
 *NOTE: This experience is better if you don&#39;t know exactly what the options are going to be before you start. Please do not go looking for spoilers.*
 (display:&quot;Reset&quot;)
 One minute, you are browsing the internet; the next, you suddenly find yourself sitting in a chair on a train. Sitting across from you is a young man with small wings on his back. He&#39;s holding a file folder, which he starts to read from.
@@ -31,13 +31,13 @@ One minute, you are browsing the internet; the next, you suddenly find yourself 
 
 &quot;I&#39;m going to need to ask a favor of you. Please just... keep your head down. If someone realizes you aren&#39;t the right person, I&#39;m right up a creek.&quot; He pauses for a second, digging around in his bag before pulling out and handing you a small bag. Looking inside, you see a handful of gold coins.
 
-&quot;Those are **Astral Coins**. 12 of them, as it happens. You *can&#39;t take them with you* when I send you back, but you&#39;ll be able to buy things from various shops along the train&#39;s route. Things bought here will have various effects on your soul and, by extension, you.&quot;
+&quot;Those are **Astral Coins**. $Coins of them, as it happens. You **can&#39;t take them with you** when I send you back, but you&#39;ll be able to buy things from various shops along the train&#39;s route. Things bought here will have various effects on your soul and, by extension, you.&quot;
 
 &quot;Call it a bribe if you want, but please just avoid notice until we finish the the trip...&quot;
 
 [[Onward-&gt;Card Hub]]
 
-*Midnight Train by Nicholas Fletcher (qwertyu63)*</tw-passagedata><tw-passagedata pid="2" name="Card Hub" tags="" position="200,200" size="100,100">(set:$Display to 0)
+*Midnight Train by Nicholas Fletcher (qwertyu63)*</tw-passagedata><tw-passagedata pid="2" name="Card Hub" tags="" position="150,150" size="100,100">(set:$Display to 0)
 (if: $Stops&#39;s length is 0)[(go-to: &quot;Final Stop&quot;)]
 (move: 1st of $Stops into $index)
 (set: $Timer to $Stops&#39;s length)
@@ -49,8 +49,9 @@ One minute, you are browsing the internet; the next, you suddenly find yourself 
 (if: $index is 6)[(go-to: &quot;Stop 6&quot;)]
 (if: $index is 7)[(go-to: &quot;Stop 7&quot;)]
 (if: $index is 8)[(go-to: &quot;Stop 8&quot;)]
+(if: $index is 9)[(go-to: &quot;Stop 9&quot;)]
 
-You shouldn&#39;t see this. If you do, go to [[Final Stop]].</tw-passagedata><tw-passagedata pid="3" name="Stop 1" tags="" position="25,75" size="100,100">**The Land of Feasting:**
+You shouldn&#39;t see this. If you do, go to [[Final Stop]].</tw-passagedata><tw-passagedata pid="3" name="Stop 1" tags="" position="25,25" size="100,100">**The Land of Feasting:**
 (display:&quot;Data&quot;)\
 
 &quot;This area is the **Land of Feasting**. Any food you can imagine can be found around here somewhere. You might as well look around; soul food might be good for you.&quot;
@@ -68,7 +69,7 @@ Near the train station, you see a small cafe. Walking inside, you glance at the 
 **Aqua Mousse**: Aqua Mousse is a blue foam that smells like the ocean. After eating it, you will never need to breathe again; furthermore, pressure (air, water, etc) will have no ill effect on you.
 ]\
 
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="4" name="Stop 3" tags="" position="275,50" size="100,100">**Opulent Palace**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="4" name="Stop 3" tags="" position="275,25" size="100,100">**Opulent Palace**
 (display:&quot;Data&quot;)\
 
 &quot;This area is the **Opulent Palace**. The palace is made of gold and silver. Very few people live here for long; they choose it, get bored and transfer out. The glee brought to them by wealth fades over time. On the other hand, I hear the jewelry stores here are amazing. While you can&#39;t take the jewelry with you, your soul wearing them will provide their benefits anyway.&quot;
@@ -96,11 +97,11 @@ Taking his advice, you find a jewelry shop and look around.
 &quot;It&#39;s a simple trade: 1 **Astral Coin** you can&#39;t take with you anyway for 27 pounds of gold. Have we got a deal? (unless: $Coins is 0)[(link:&quot;Yes.&quot;)[(set:$Gold to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 3&quot;)](else:)[You can&#39;t afford this.]
 ]
 ]\
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="5" name="Stop 5" tags="" position="25,325" size="100,100">**Administration**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="5" name="Stop 5" tags="" position="25,275" size="100,100">**Administration**
 
 (display:&quot;Data&quot;)\
 
-&quot;Alright, this area is actually different from the others. Dead souls don&#39;t live here. From this area, the gods and goddesses manange both worlds- Afterlife and Life. There isn&#39;t really anything for sale...&quot;
+&quot;Alright, this area is actually different from the others. Dead souls don&#39;t live here. From this area, the gods and goddesses manange both worlds- Afterlife and Life. The record here note all that is and all that has been. There isn&#39;t really anything for sale here.&quot;
 
 &quot;Actually, I&#39;ve got an idea, if you want. I have a friend inside. Head in and ask for Jack; tell him Ace sent you. For a coin or two, he should be able to make minor changes to your file, altering your body directly.&quot;
 
@@ -118,7 +119,7 @@ Heading inside and finding this Jack, he pulls up your file and starts explainin
 **Rebuild:** &quot;Alright, if you really need me to, I can go a bit deeper on the appearance change. I can tweak height, weight, hair color, eye color, and so on. Don&#39;t get too crazy; you&#39;ll still be recognizable as you.&quot;
 ]\
 
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="6" name="Stop 6" tags="" position="150,350" size="100,100">**The Temple of Superiority**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="6" name="Stop 6" tags="" position="150,275" size="100,100">**The Temple of Superiority**
 (display:&quot;Data&quot;)\
 
 &quot;The Temple of Superiority is... where the biggest ego&#39;s collect. Despite the name, it&#39;s actually the biggest source of intellect around. For all their boasting, they have the mental power to back it up.&quot;
@@ -137,12 +138,16 @@ Heading inside, you spot a class schedule. There are two lined up that you&#39;v
 **Mental Blade:** While the Fortress protects your mind, the Blade attacks the minds of others. By looking directly into someone else&#39;s eyes, you can hear their current thoughts; by touching them, you can search and view their memories.
 ]\
 
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="7" name="Stop 8" tags="" position="400,325" size="100,100">**Mountain of Fury**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="7" name="Stop 8" tags="" position="400,275" size="100,100">**Mountain of Fury**
 (display:&quot;Data&quot;)\
 
-&quot;The Mountain of Fury is a strange place. A place of thrills and trials, people come here looking for a challenge. The mountain is surrounded by perilous deserts, untamed forests, monster-filled valleys and undiscovered mysteries beyond.&quot;
+&quot;The Mountain of Fury is a strange place. A place of thrills and trials, people come here looking for a challenge. The mountain is surrounded by perilous deserts, untamed forests, monster-filled valleys, lost ruins and undiscovered mysteries beyond; collectively, the area around the Mountain is known as the Wilds.&quot;
 
-&quot;Here at the Dojo on the Peak, you can train yourself to better face the trials of the world.&quot;
+&quot;On the Mountain itself, you will find the City. Here, explorers rest, train and equip themselves for quests out into the Wilds.&quot;
+
+&quot;I can actually think of two things you might want to do here. With a stop at the Dojo, you can train yourself to better face the trials of the world. On the other hand, you might be able to buy a couple minor magic items; people wouldn&#39;t sell bigger ones, but you never know.&quot;
+
+Stopping the dojo, you grab a list of training programs being offered today.
 
 **Training:**
 *1 Coin each*
@@ -151,10 +156,22 @@ Heading inside, you spot a class schedule. There are two lined up that you&#39;v
 (if:$Senses is 0)[(link:&quot;Blue Star Senses:&quot;)[(set:$Senses to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Blue Star Senses:**] With the power of the blue star, your sight and hearing are enhanced (restoring any loss or damage) and increasing sensitivity. You can also see infrared and ultraviolet light.
 ](else:)[\
 **Red Star Control:** With the power of the red star, you gain a degree of control over your internal processes. You no longer have to produce waste products and can selectively render yourself infertile.
-**Blue Star Senses:** With the power of the blue star, your sight and hearing are enhanced (restoring any loss or damage). Your visual acuity is vastly increased and you can see infrared and ultraviolet light; your hearing is just increased.
+**Blue Star Senses:** With the power of the blue star, your sight and hearing are enhanced (restoring any loss or damage) and increasing sensitivity. You can also see infrared and ultraviolet light.
 ]\
 
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="8" name="Stop 7" tags="" position="275,350" size="100,100">**The Resort of Relaxation**
+Slipping over to a nearby shop, you see a couple of things for sale. It seems they are having a clearance sale on some items they have a few of. Most are useless (can&#39;t take them with you and all), but a couple look like they get past that.
+
+**Magic Item:**
+*1 Coin each*
+(unless: $Coins is 0)[\
+(if:$Knife is 0)[(link:&quot;Bound Knife:&quot;)[(set:$Knife to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Bound Knife:**] The owner of this knife can summon it to their hand at anytime, from anywhere. They can also change its length and sharpness when summoning it, summoning anything from a butterknife to a greatsword.
+(if:$Wand is 0)[(link:&quot;Bound Wand:&quot;)[(set:$Wand to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Bound Wand:**] The owner of this wand can summon it to their hand at anytime, from anywhere. The wand can be used to either pull items directly towards the user or push them directly away.
+](else:)[\
+**Bound Knife:** The owner of this knife can summon it to their hand at anytime, from anywhere. They can also change its length and sharpness when summoning it, summoning anything from a butterknife to a greatsword.
+**Bound Wand:** The owner of this wand can summon it to their hand at anytime, from anywhere. The wand can be used to either pull items directly towards the user or push them directly away.
+]\
+
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="8" name="Stop 7" tags="" position="275,275" size="100,100">**The Resort of Relaxation**
 (display:&quot;Data&quot;)\
 
 &quot;Ah, I always like it here. This is the Resort of Relaxation. An endless tropical beach, with a beautiful forest, if you perfer. It&#39;s an amazing place to unwind and refresh.&quot;
@@ -164,19 +181,16 @@ Heading inside, you spot a class schedule. There are two lined up that you&#39;v
 **Cocktail Menu:**
 *1 Coin per drink*
 (unless: $Coins is 0)[\
-(if:$Joy is 0)[(link:&quot;Joy in the Wind:&quot;)[(set:$Joy to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)](else:)[**Joy in the Wind:**] After drinking this, fortune bends in your favor. Purely events are 50% more likely to go in your favor (e.g. a coin flip has a 75% chance to land the way to want).
-]\
-(if:$Dance is 0)[(link:&quot;Dance in the Sand:&quot;)[(set:$Dance to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)](else:)[**Dance in the Sand:**] After drinking this, time slides along at your whim. You can speed up or slow down your perception by up to 100%, letting you fit more thinking time or fast foward through boring things.
-]\
-(if:$Sun is 0)[(link:&quot;Sun on the Horizon:&quot;)[(set:$Sun to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)](else:)[**Sun on the Horizon:**] After drinking this, you attune with the flow of time and space. You always know the exact time of day to the second, which way is north, your current location (latitude, longitude and altitude) and the current phase of the moon.
-]\
+(if:$Joy is 0)[(link:&quot;Joy in the Wind:&quot;)[(set:$Joy to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)]](else:)[**Joy in the Wind:**] After drinking this, fortune bends in your favor. Purely events are 50% more likely to go in your favor (e.g. a coin flip has a 75% chance to land the way to want).
+(if:$Dance is 0)[(link:&quot;Dance in the Sand:&quot;)[(set:$Dance to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)]](else:)[**Dance in the Sand:**] After drinking this, time slides along at your whim. You can speed up or slow down your perception by up to 100%, letting you fit more thinking time or fast foward through boring things.
+(if:$Sun is 0)[(link:&quot;Sun on the Horizon:&quot;)[(set:$Sun to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 7&quot;)]](else:)[**Sun on the Horizon:**] After drinking this, you attune with the flow of time and space. You always know the exact time of day to the second, which way is north, your current location (latitude, longitude and altitude) and the current phase of the moon.
 ](else:)[\
 **Joy in the Wind:** After drinking this, fortune bends in your favor. Purely events are 50% more likely to go in your favor (e.g. a coin flip has a 75% chance to land the way to want).
 **Dance in the Sand:** After drinking this, time slides along at your whim. You can speed up or slow down your perception by up to 100%, letting you fit more thinking time or fast foward through boring things.
 **Sun on the Horizon:** After drinking this, you attune with the flow of time and space. You always know the exact time of day to the second, which way is north, your current location (latitude, longitude and altitude) and where the current phase of the moon.
 ]\
 
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="9" name="Stop 4" tags="" position="400,75" size="100,100">**Desire Plaza**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="9" name="Stop 4" tags="" position="400,25" size="100,100">**Desire Plaza**
 (display:&quot;Data&quot;)\
 
 &quot;This area is Desire Plaza. It&#39;s the biggest marketplace around; people are always looking to pick up the next new trend. If you&#39;re looking for something good to buy here, I&#39;d advise hitting up a clothing shop; clothes worn by your soul should apply their benefits to you back in Life.&quot;
@@ -193,7 +207,7 @@ As it happens, there is a clothing store within easy access. Most of the store i
 **Sweater of Balance:** This rather gaudy looking sweater shields the wearer from the enviroment. The wearer suffers no ill effect from heat or cold; it also makes them fireproof.
 ]\
 
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="10" name="Stop 2" tags="" position="150,50" size="100,100">**The Isle of Passion**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="10" name="Stop 2" tags="" position="150,25" size="100,100">**The Isle of Passion**
 (display:&quot;Data&quot;)\
 
 &quot;This area is the **Isle of Passion**. The island is primarily full of lovers and those looking for... something a bit faster, I suppose; not my thing, so I don&#39;t really know. In any event, you probably don&#39;t have the time to get up to any of that, but a trip to the clinic right next to the station might be nice.&quot;
@@ -222,17 +236,17 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 &quot;So, are you interested?&quot; (unless: $Coins is 0)[(link:&quot;Yes.&quot;)[(set:$Partner to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 2&quot;)](else:)[You can&#39;t afford this.]
 ]
 ]\
-[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="11" name="Final Stop" tags="" position="400,200" size="100,100">**The Rainbow Bridge**
+[[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="11" name="Final Stop" tags="" position="275,150" size="100,100">**The Rainbow Bridge**
 **$Coins Astral Coins Remaining**
 
-&quot;Well, it&#39;s the end of the line. We&#39;ve made it back to the Rainbow Bridge. You can take the Bridge back down to Life and everything will be fine.(unless:$Coins is 0)[ I&#39;ll have to *take back all the coins you have left* before you go; you can&#39;t take them over the Bridge.] Everything you&#39;ve bought is tied to your soul, so it should go with you.&quot;
+&quot;Well, it&#39;s the end of the line. We&#39;ve made it back to the Rainbow Bridge. You can take the Bridge back down to Life and everything will be fine.(unless:$Coins is 0)[ I&#39;ll have to **take back all the coins you have left** before you go; you can&#39;t take them over the Bridge.] Everything you&#39;ve bought is tied to your soul, so it should go with you.&quot;
 
 &quot;Thanks for playing along with all of this. You&#39;ve saved my job, that&#39;s for sure. I&#39;m sure I&#39;ll see you again eventually, when you&#39;re supposed to be here.&quot;
 
-[[Take the Bridge-&gt;Ending]]</tw-passagedata><tw-passagedata pid="12" name="Data" tags="" position="525,75" size="100,100">**$Coins Astral Coins Remaining**
+[[Take the Bridge-&gt;Ending]]</tw-passagedata><tw-passagedata pid="12" name="Data" tags="" position="525,25" size="100,100">**$Coins Astral Coins Remaining**
 **Stops Left: $Timer**
 
-(if:$Display is 0)[(if:$Timer is 7)[
+(if:$Display is 0)[(if:$Timer is 8)[
 &quot;I should actually explain how the Afterlife works. That&#39;s the proper name, by the way; the gods named it the Afterlife. And before you ask, there&#39;s only the one; we don&#39;t actually care how people act in Life.&quot;
 
 &quot;Most areas of the Afterlife are based on one part of Life. Souls can choose any area to live in, taking the Trains between them. You don&#39;t need to worry about that right now, seeing as you&#39;re not dead yet.&quot;
@@ -241,7 +255,7 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 
 &quot;The Train stops in each zone for exactly 60 minutes. We can go ahead and get off for a bit. Look around, you know.&quot;
 ]\
-(if:$Timer is 6)[
+(if:$Timer is 7)[
 &quot;As we&#39;re travelling, you will want to plan things carefully. As I said before, the Train doesn&#39;t go back.&quot;
 ]\
 (if:$Timer is 2)[
@@ -253,9 +267,9 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 (if:$Timer is 0)[
 &quot;Alright, it&#39;s time to start wrapping things up. The next stop is the Bridge.&quot;
 ]\
-(set:$Display to 1)]</tw-passagedata><tw-passagedata pid="13" name="Reset" tags="" position="525,325" size="100,100">{(set: $Stops to (shuffled: 1,2,3,4,5,6,7,8))
-(set: $Timer to 8)
-(set: $Coins to 12)
+(set:$Display to 1)]</tw-passagedata><tw-passagedata pid="13" name="Reset" tags="" position="525,150" size="100,100">{(set: $Stops to (shuffled: 1,2,3,4,5,6,7,8,9))
+(set: $Timer to 9)
+(set: $Coins to 15)
 
 (set:$Ambrosia to 0)
 (set:$Quicksilver to 0)
@@ -283,13 +297,23 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 
 (set:$Joy to 0)
 (set:$Sand to 0)
+(set:$Sun to 0)
 
 (set:$Control to 0)
-(set:$Senses to 0)}</tw-passagedata><tw-passagedata pid="14" name="Ending" tags="" position="525,200" size="100,100">You wake up, slumped over on your computer. From looking at the clock, 8 hours have passed. As far as things look, you just passed out for a long nap. But you know, you know that everything is different now.
+(set:$Senses to 0)
+(set:$Knife to 0)
+(set:$Wand to 0)
+
+(set:$Peace to 0)
+(set:$Adventure to 0)}</tw-passagedata><tw-passagedata pid="14" name="Ending" tags="" position="400,150" size="100,100">You wake up, slumped over on your computer. From looking at the clock, 8 hours have passed. As far as things look, you just passed out for a long nap. But you know, you know that everything is different now.
 
 *The End*
 
 **Choices Overview:**
+(if:$Peace is 1)[**Peaceful Life:** Your life will be calm and uneventful.
+]\
+(if:$Adventure is 1)[**Life of Adventure:** Your life will exciting and eventful.
+]\
 (if:$Ambrosia is 1)[**Ambrosia:** You don&#39;t need to eat or drink.
 ]\
 (if:$Fortune is 1)[**Anklet of Fortune:** You will get $500 per week.
@@ -299,6 +323,10 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 (if:$Mousse is 1)[**Aqua Mousse:** You don&#39;t need to breathe and are immune to pressure.
 ]\
 (if:$Senses is 1)[**Blue Star Senses:** Your sight and hearing are enhanced; you can also see ultraviolet and infrared light.
+]\
+(if:$Knife is 1)[**Bound Knife:** You own a shapeshifting knife that teleports to you.
+]\
+(if:$Wand is 1)[**Bound Wand:** You own a basic magic wand that teleports to you.
 ]\
 (if:$Dance is 1)[**Dance in the Sand:** You can speed up or slow down your mind.
 ]\
@@ -337,7 +365,25 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 (if:$Sweater is 1)[**Sweater of Balance:** You are immune to heat, cold and fire.
 ]\
 
-*Midnight Train by Nicholas Fletcher (qwertyu63)*</tw-passagedata></tw-storydata>
+*Midnight Train by Nicholas Fletcher (qwertyu63)*</tw-passagedata><tw-passagedata pid="15" name="Stop 9" tags="" position="525,275" size="100,100">**Hall of Destiny**
+(display:&quot;Data&quot;)\
+
+&quot;This is Hall of Destiny. From here, the gods and goddesses set out their plans for Life.&quot;
+
+&quot;You can&#39;t really go shopping here, but for a small bribe, you may be able to change your destiny.&quot;
+
+Slipping inside, you find a bookkeeper who looks helpful and ask about changing your story.
+
+*&quot;Alright, I really shouldn&#39;t do this, but for 1 Coin, I can refile your folder into a different department. You can ****only choose one****, so choose carefully. If you like, I can also just leave it where it is... not sure where that is off hand, but I&#39;m sure it&#39;s fine.&quot;*
+(unless: $Coins is 0)[\
+(if:$Peace is 0 and $Adventure is 0)[(link:&quot;Peaceful Life:&quot;)[(set:$Peace to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 9&quot;)]](else:)[**Peaceful Life:**] If I kick you over to this department, your life will be uneventful, if boring. Unless you start something, there won&#39;t be anything. This won&#39;t protect you from the consequences of your own actions, but it will protect you from fate.
+(if:$Peace is 0 and $Adventure is 0)[(link:&quot;Life of Adventure:&quot;)[(set:$Adventure to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 9&quot;)]](else:)[**Life of Adventure:**] On the other hand, in this department, things are a bit more, interesting. New and novel events will find you. This part is more dangerous, but it&#39;s more exciting.
+](else:)[\
+**Peaceful Life:** If I kick you over to this department, your life will be uneventful, if boring. Unless you start something, there won&#39;t be anything. This won&#39;t protect you from the consequences of your own actions, but it will protect you from fate.
+**Life of Adventure:** On the other hand, in this department, things are a bit more, interesting. New and novel events will find you. This part is more dangerous, but it&#39;s more exciting.
+]\
+
+[[Next Stop-&gt;Card Hub]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
