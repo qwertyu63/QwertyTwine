@@ -111,7 +111,7 @@ Heading inside and finding this Jack, he pulls up your file and starts explainin
 *&quot;I&#39;ll need 1 Coin for each change you want to make; got to cover my ass, after all.&quot;*
 (unless: $Coins is 0)[\
 (if:$Perfection is 0)[(link:&quot;Perfection:&quot;)[(set:$Perfection to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 5&quot;)]](else:)[**Perfection:**] &quot;I can polish up your physical traits, making you stronger, faster and more coordinated; basically, you&#39;ll be Captain America.&quot;
-(if:$Inversion is 0)[(link:&quot;Inversion:&quot;)[(set:$Inversion to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 5&quot;)]](else:)[**Inversion:**] &quot;I can change things up, changing your physical sex to... whatever, really. Male, female? Easy. Some mix? A bit harder, but it can be done.&quot;
+(if:$Inversion is 0)[(link:&quot;Inversion:&quot;)[(set:$Inversion to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 5&quot;)]](else:)[**Inversion:**] &quot;I can change things up, changing your physical sex to... whatever, really. Male, female? Easy. Some mix? A bit harder, but I can do it.&quot;
 (if:$Rebuild is 0)[(link:&quot;Rebuild:&quot;)[(set:$Rebuild to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 5&quot;)]](else:)[**Rebuild:**] &quot;Alright, if you really need me to, I can go a bit deeper on the appearance change. I can tweak height, weight, hair color, eye color, and so on. Don&#39;t get too crazy; you&#39;ll still be recognizable as you.&quot;
 ](else:)[\
 **Perfection:** &quot;I can polish up your physical traits, making you stronger, faster and more coordinated; basically, you&#39;ll be Captain America.&quot;
@@ -129,13 +129,15 @@ Heading inside and finding this Jack, he pulls up your file and starts explainin
 Heading inside, you spot a class schedule. There are two lined up that you&#39;ve got the chance to attend.
 
 **Upcoming Courses:**
-*25 minutes each; Tuition is 1 Coin.*
+*15 minutes each; Tuition is 1 Coin.*
 (unless: $Coins is 0)[\
 (if:$Fortress is 0)[(link:&quot;Mental Fortress:&quot;)[(set:$Fortress to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 6&quot;)]](else:)[**Mental Fortress:**] The Fortress armors your mind against a variety of ills. Your memory becomes perfect, able to remember anything you&#39;ve ever seen, and you become immune to the ill effects of fear and stress.
 (if:$Blade is 0)[(link:&quot;Mental Blade:&quot;)[(set:$Blade to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 6&quot;)]](else:)[**Mental Blade:**] While the Fortress protects your mind, the Blade attacks the minds of others. By looking directly into someone else&#39;s eyes, you can hear their current thoughts; by touching them, you can search and view their memories.
+(if:$Eye is 0)[(link:&quot;Mental Eye:&quot;)[(set:$Eye to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 6&quot;)]](else:)[**Mental Eye:**] The Eye is the most powerful ability on offer today. With the Eye, if something is going to cause you harm within the next 5 seconds, you will see a spilt-second vision of th hazard.
 ](else:)[\
 **Mental Fortress:** The Fortress armors your mind against a variety of ills. Your memory becomes perfect, able to remember anything you&#39;ve ever seen, and you become immune to the ill effects of fear and panic.
 **Mental Blade:** While the Fortress protects your mind, the Blade attacks the minds of others. By looking directly into someone else&#39;s eyes, you can hear their current thoughts; by touching them, you can search and view their memories.
+**Mental Eye:** The Eye is the most powerful ability on offer today. With the Eye, if something is going to cause you harm within the next 5 seconds, you will see a spilt-second vision of th hazard
 ]\
 
 [[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="7" name="Stop 8" tags="" position="400,275" size="100,100">**Mountain of Fury**
@@ -161,14 +163,18 @@ Stopping the dojo, you grab a list of training programs being offered today.
 
 Slipping over to a nearby shop, you see a couple of things for sale. It seems they are having a clearance sale on some items they have a few of. Most are useless (can&#39;t take them with you and all), but a couple look like they get past that.
 
-**Magic Item:**
+They have a couple of Bound Items for sale. A sign tells you that Bound Items are loyal to their owner. If their owner needs them, they will be within reach and in perfect condition, regardless of the contrived circumstances required to cause this; no one sees them come or go, but there they are.
+
+Each also has a number of Forms; when their owner needs them, they will take on the most helpful Form for the situation.
+
+**Bound Items:**
 *1 Coin each*
 (unless: $Coins is 0)[\
-(if:$Knife is 0)[(link:&quot;Bound Knife:&quot;)[(set:$Knife to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Bound Knife:**] The owner of this knife can summon it to their hand at anytime, from anywhere. They can also change its length and sharpness when summoning it, summoning anything from a butterknife to a greatsword.
-(if:$Wand is 0)[(link:&quot;Bound Wand:&quot;)[(set:$Wand to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Bound Wand:**] The owner of this wand can summon it to their hand at anytime, from anywhere. The wand can be used to either pull items directly towards the user or push them directly away.
+(if:$Knife is 0)[(link:&quot;Bound Knife:&quot;)[(set:$Knife to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Bound Knife:**] This knife can take on the Form of any normal blade used in one hand, ranging from a butterknife to a sword.
+(if:$Suit is 0)[(link:&quot;Bound Suit:&quot;)[(set:$Suit to 1)(set:$Coins to it - 1)(go-to: &quot;Stop 8&quot;)]](else:)[**Bound Suit:**] This suit can take on the Form of any normal outfit that fits its owner.
 ](else:)[\
-**Bound Knife:** The owner of this knife can summon it to their hand at anytime, from anywhere. They can also change its length and sharpness when summoning it, summoning anything from a butterknife to a greatsword.
-**Bound Wand:** The owner of this wand can summon it to their hand at anytime, from anywhere. The wand can be used to either pull items directly towards the user or push them directly away.
+**Bound Knife:** This knife can take on the Form of any normal blade used in one hand, ranging from a butterknife to a sword.
+**Bound Suit:** This suit can take on the Form of any normal outfit that fits its owner.
 ]\
 
 [[Next Stop-&gt;Card Hub]]</tw-passagedata><tw-passagedata pid="8" name="Stop 7" tags="" position="275,275" size="100,100">**The Resort of Relaxation**
@@ -324,9 +330,9 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 ]\
 (if:$Senses is 1)[**Blue Star Senses:** Your sight and hearing are enhanced; you can also see ultraviolet and infrared light.
 ]\
-(if:$Knife is 1)[**Bound Knife:** You own a shapeshifting knife that teleports to you.
+(if:$Knife is 1)[**Bound Knife:** You own a shapeshifting knife that comes to you when you need it.
 ]\
-(if:$Wand is 1)[**Bound Wand:** You own a basic magic wand that teleports to you.
+(if:$Suit is 1)[**Bound Suit:** You own a shapeshifting outfit that appears when you need it.
 ]\
 (if:$Dance is 1)[**Dance in the Sand:** You can speed up or slow down your mind.
 ]\
@@ -337,6 +343,8 @@ As he said, you spot a large clinic nearby. Walking inside, they hand you a pamp
 (if:$Joy is 1)[**Joy in the Wind:** You are lucky.
 ]\
 (if:$Blade is 1)[**Mental Blade:** You can read minds by eye contact and touch.
+]\
+(if:$Eye is 1)[**Mental Eye:** You get visions warning you of impending hazards.
 ]\
 (if:$Fortress is 1)[**Mental Fortress:** You have a perfect memory and are immune to fear and stress.
 ]\
