@@ -1,0 +1,22 @@
+The runes Fire, Fire casts Fire Crash.
+//The runes Water, Water casts Water Crash.
+//The runes Air, Air casts Air Crash.
+//The runes Earth, Earth casts Earth Crash.
+//The runes Fire, Boost casts Flame Charge.
+//The runes Water, Boost casts Tidal Flow.
+//The runes Air, Boost casts Wind Slash.
+//The runes Earth, Boost casts Stone Shot.
+//The runes Fire, Infuse casts Inferno.
+//The runes Water, Infuse casts Healing Water.
+//The runes Air, Infuse casts Cloak of Wind.
+//The runes Earth, Infuse casts Stone Barrier.
+//The runes Fire, Shift casts Sunlight.
+//The runes Water, Shift casts Ice Blast.
+//The runes Air, Shift casts Lightning Blast.
+//The runes Earth, Shift casts Overgrowth.
+//The runes Fire, Earth, Unity casts Magma Strike.
+//The runes Water, Air, Unity casts Hurricane.
+//The runes Fire, Air, Unity casts Heat Wave.
+//The runes Water, Earth, Unity casts Mud Slide.
+//The runes Fire, Water, Unity casts Soothing Steam.
+//The runes Air, Earth, Unity casts Sand Storm.

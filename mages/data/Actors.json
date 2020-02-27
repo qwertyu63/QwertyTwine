@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"battlerName":"Flame1","characterIndex":0,"characterName":"Flame","classId":1,"equips":[1,1,9],"faceIndex":0,"faceName":"Flame","traits":[],"initialLevel":1,"maxLevel":12,"name":"Linda","nickname":"","note":"<battle command: skill_type 3 />\n<battle command: item />\n\n<Start Runes Max: 1>\n","profile":""},
+{"id":2,"battlerName":"Flame4","characterIndex":4,"characterName":"Flame","classId":2,"equips":[2,1,9],"faceIndex":4,"faceName":"Flame","traits":[],"initialLevel":1,"maxLevel":12,"name":"Blake","nickname":"","note":"<battle command: skill_type 3 />\n<battle command: item />\n\n<Start Runes Max: 1>\n","profile":""},
+{"id":3,"battlerName":"Flame2","characterIndex":1,"characterName":"Flame","classId":3,"equips":[2,1,9],"faceIndex":1,"faceName":"Flame","traits":[],"initialLevel":1,"maxLevel":12,"name":"Suzie","nickname":"","note":"<battle command: skill_type 3 />\n<battle command: item />\n\n<Start Runes Max: 1>\n","profile":""},
+{"id":4,"battlerName":"Summon2","characterIndex":1,"characterName":"Summon","classId":4,"equips":[2,1,9],"faceIndex":1,"faceName":"Summon","traits":[],"initialLevel":1,"maxLevel":12,"name":"Flame","nickname":"","note":"<battle command: skill_type 2 />\n<battle command: item />\n","profile":""}
+]
